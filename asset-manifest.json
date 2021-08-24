@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/week3live/static/css/main.a617e044.chunk.css",
+    "main.js": "/week3live/static/js/main.c1e1a188.chunk.js",
+    "main.js.map": "/week3live/static/js/main.c1e1a188.chunk.js.map",
+    "runtime-main.js": "/week3live/static/js/runtime-main.5354fbd3.js",
+    "runtime-main.js.map": "/week3live/static/js/runtime-main.5354fbd3.js.map",
+    "static/js/2.bf64b7e4.chunk.js": "/week3live/static/js/2.bf64b7e4.chunk.js",
+    "static/js/2.bf64b7e4.chunk.js.map": "/week3live/static/js/2.bf64b7e4.chunk.js.map",
+    "static/js/3.3e3fb877.chunk.js": "/week3live/static/js/3.3e3fb877.chunk.js",
+    "static/js/3.3e3fb877.chunk.js.map": "/week3live/static/js/3.3e3fb877.chunk.js.map",
+    "index.html": "/week3live/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/week3live/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.bf64b7e4.chunk.js.LICENSE.txt": "/week3live/static/js/2.bf64b7e4.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/week3live/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5354fbd3.js",
+    "static/js/2.bf64b7e4.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.c1e1a188.chunk.js"
+  ]
+}
