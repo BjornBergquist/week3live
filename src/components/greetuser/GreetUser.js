@@ -1,5 +1,5 @@
 import React from "react";
-import "./GreetUser.css";
+import style from "./GreetUser.module.css";
 
 export const GreetUser = (props) => {
   const showAlert = () => {
@@ -10,7 +10,7 @@ export const GreetUser = (props) => {
       <h1 className="greetuser__header" onClick={() => showAlert()}>
         Welcome to my page, {props.name}!
       </h1>
-      <p className="error"> I am {props.age} years old. </p>
+      <p className={style.error}> I am {props.age} years old. </p>
     </div>
   );
 };

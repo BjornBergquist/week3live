@@ -1,6 +1,6 @@
 import React from "react";
-import "./ErrorButton.css";
+import style from "./ErrorButton.module.css";
 
 export const ErrorButton = () => {
-  return <button className="error">An error has occured!</button>;
+  return <button className={style.error}>An error has occured!</button>;
 };
