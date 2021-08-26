@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/greetuser/GreetUser.css"],"names":[],"mappings":"AAAA,WACE,qBAAsB,CACtB,WACF","file":"main.dff97254.chunk.css","sourcesContent":[".greetuser {\r\n  background-color: pink;\r\n  padding: 2em;\r\n}\r\n"]}
