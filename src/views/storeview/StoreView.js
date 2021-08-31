@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 export const StoreView = () => {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    alert("Hej dotNet20D!");
+    console.log("Hej dotNet20D!");
     return () => {
-      alert("Hejdå!");
+      console.log("Hejdå!");
     };
-  }, []);
+  }, [count]);
 
   return (
     <div>
