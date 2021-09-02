@@ -1,4 +1,31 @@
-import { useState, useContext } from "react";
+import React, { useContext, useState } from "react";
+import { UserContext } from "../../shared/provider/UserProvider";
+import "./SignInView.css";
+
+export const SignInView = () => {
+  const [authenticatedUser, SetAuthenticatedUser] = useContext(UserContext);
+  // const [username, setUsername] = useState("Björn");
+  const [password, setPassword] = useState();
+  return (
+    <div>
+      <h1> {authenticatedUser} </h1>
+      <input
+        placeholder="Enter username"
+        onChange={(event) => SetAuthenticatedUser(event.target.value)}
+      />
+      <br />
+      <input
+        placeholder="Enter password"
+        type="password"
+        onChange={(event) => setPassword(event.target.value)}
+      />
+       <br />
+      <button>Sign in</button>
+    </div>
+  );
+};
+
+/*import { useState, useContext } from "react";
 import { UserContext } from "../../shared/provider/UserProvider";
 
 export const SignInView = () => {
@@ -25,3 +52,4 @@ export const SignInView = () => {
     </div>
   );
 };
+*/
