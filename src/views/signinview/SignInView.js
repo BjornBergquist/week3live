@@ -1,17 +1,25 @@
 import React, { useContext, useState } from "react";
+import { useHistory } from "react-router";
 import { UserContext } from "../../shared/provider/UserProvider";
 import "./SignInView.css";
 
 export const SignInView = () => {
   const [authenticatedUser, SetAuthenticatedUser] = useContext(UserContext);
-  // const [username, setUsername] = useState("Björn");
+  const [username, setUsername] = useState("Björn");
   const [password, setPassword] = useState();
+  const history = useHistory();
+
+  const logIn = () => {
+    SetAuthenticatedUser(username);
+    history.goBack();
+  };
+
   return (
     <div>
-      <h1> {authenticatedUser} </h1>
+      <h1> {username} </h1>
       <input
         placeholder="Enter username"
-        onChange={(event) => SetAuthenticatedUser(event.target.value)}
+        onChange={(event) => setUsername(event.target.value)}
       />
       <br />
       <input
@@ -20,7 +28,7 @@ export const SignInView = () => {
         onChange={(event) => setPassword(event.target.value)}
       />
        <br />
-      <button>Sign in</button>
+      <button onClick={() => logIn()}>Sign in</button>
     </div>
   );
 };

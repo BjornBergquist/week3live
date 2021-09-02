@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { UserContext } from "../../shared/provider/UserProvider";
 
 export const StoreView = () => {
   const [count, setCount] = useState(0);
