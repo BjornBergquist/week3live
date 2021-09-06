@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --clr-primary-light: #a3d4d4;
+  --clr-primary: #2875a5;
+  --clr-primary-dark: #05314c;
+  --clr-secondary: #333;
+  --clr-secondary-light: white;
+  --clr-accent: #b92e2a;
+  --clr-accent-dark: hsl(2, 66%, 35%);
+}
+
+body {
+  /* Tar bort förinställd rymd i body, då jag hellre vill ändra det själv */
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-secondary);
+  color: var(--clr-secondary-light);
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  /* Inkluderar padding och border i width och height utrökningar. */
+  box-sizing: border-box;
+}
+
+img {
+  /* Gör så att bilder inte växer sig större än sin förälder. */
+  max-width: 100%;
+}
+
+main {
+  margin-inline: 2em;
+}

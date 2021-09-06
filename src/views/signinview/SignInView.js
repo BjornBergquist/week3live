@@ -15,21 +15,23 @@ export const SignInView = () => {
   };
 
   return (
-    <div>
-      <h1> {username} </h1>
-      <input
-        placeholder="Enter username"
-        onChange={(event) => setUsername(event.target.value)}
-      />
-      <br />
-      <input
-        placeholder="Enter password"
-        type="password"
-        onChange={(event) => setPassword(event.target.value)}
-      />
-       <br />
-      <button onClick={() => logIn()}>Sign in</button>
-    </div>
+    <main>
+      <section>
+        <h1> {username} </h1>
+        <input
+          placeholder="Enter username"
+          onChange={(event) => setUsername(event.target.value)}
+        />
+        <br />
+        <input
+          placeholder="Enter password"
+          type="password"
+          onChange={(event) => setPassword(event.target.value)}
+        />
+         <br />
+        <button onClick={() => logIn()}>Sign in</button>
+      </section>
+    </main>
   );
 };
 
