@@ -7,7 +7,7 @@ import RoutingPath from "./RoutingPath";
 
 export const Routes = ({ children }) => {
   return (
-    <BrowserRouter basename="/Week3Live">
+    <BrowserRouter basename="/week3live">
       {children}
       <Switch>
         <Route exact path={RoutingPath.signInView} component={SignInView} />
