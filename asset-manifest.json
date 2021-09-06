@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/week3live/static/css/main.85cbb48c.chunk.css",
-    "main.js": "/week3live/static/js/main.f9a2156f.chunk.js",
-    "main.js.map": "/week3live/static/js/main.f9a2156f.chunk.js.map",
+    "main.js": "/week3live/static/js/main.24d27730.chunk.js",
+    "main.js.map": "/week3live/static/js/main.24d27730.chunk.js.map",
     "runtime-main.js": "/week3live/static/js/runtime-main.5d1c8cc1.js",
     "runtime-main.js.map": "/week3live/static/js/runtime-main.5d1c8cc1.js.map",
     "static/js/2.29b26fc9.chunk.js": "/week3live/static/js/2.29b26fc9.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5d1c8cc1.js",
     "static/js/2.29b26fc9.chunk.js",
     "static/css/main.85cbb48c.chunk.css",
-    "static/js/main.f9a2156f.chunk.js"
+    "static/js/main.24d27730.chunk.js"
   ]
 }
