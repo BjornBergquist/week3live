@@ -8,9 +8,11 @@ import { ProfileView } from "../views/profileview/ProfileView";
 import RoutingPath from "./RoutingPath";
 import { UserContext } from "../shared/provider/UserProvider";
 import LocalStorage from "../shared/storage/LocalStorage";
+import { useHistory } from "react-router";
 
 export const Routes = ({ children }) => {
   const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
+  const history = useHistory();
 
   const isUserAuthenticated = () => {
     const userFromMemory = localStorage.getItem(LocalStorage.username);
@@ -21,14 +23,36 @@ export const Routes = ({ children }) => {
     isUserAuthenticated();
   }, []);
 
+  // const blockIfAuthenticated = (view) => {
+  //   if (!authenticatedUser) return view;
+  //   else return HomeView;
+  // };
+
+  const blockIfAuthenticated = (view) => (authenticatedUser ? HomeView : view);
+
+  const authenticationRequired = (view) =>
+    authenticatedUser ? view : HomeView;
+
   return (
     <BrowserRouter basename="/week3live">
       {children}
       <Switch>
-        <Route exact path={RoutingPath.signInView} component={SignInView} />
+        <Route
+          exact
+          path={RoutingPath.signInView}
+          component={blockIfAuthenticated(SignInView)}
+        />
         <Route exact path={RoutingPath.storeView} component={StoreView} />
-        <Route exact path={RoutingPath.settingsView} component={SettingsView} />
-        <Route exact path={RoutingPath.profileView} component={ProfileView} />
+        <Route
+          exact
+          path={RoutingPath.settingsView}
+          component={authenticationRequired(SettingsView)}
+        />
+        <Route
+          exact
+          path={RoutingPath.profileView}
+          component={authenticationRequired(ProfileView)}
+        />
         <Route path={RoutingPath.homeView} component={HomeView} />
         {/*<Route path={RoutingPath.fourOFourView} component={FourOFourView} />*/}
       </Switch>
