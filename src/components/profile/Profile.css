@@ -1,0 +1,11 @@
+.profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile__image {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
