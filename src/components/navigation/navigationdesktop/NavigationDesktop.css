@@ -8,11 +8,11 @@
 }
 
 .navbar__logo--desktop {
-  font-size: 2em;
+  font-size: 1.75em;
+  max-height: 2em;
   justify-self: start;
-  margin: 0;
   grid-column: 2;
-  padding: 0.25rem 0;
+  margin: 0.25rem 0;
 }
 
 .navbar__list--deskop {
@@ -26,7 +26,6 @@
 }
 
 .navbar__login--desktop {
-  padding: 0.25rem 0;
   justify-self: end;
   grid-column: -3;
 }
