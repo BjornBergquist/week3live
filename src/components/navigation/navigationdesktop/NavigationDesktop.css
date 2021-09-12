@@ -8,9 +8,11 @@
 }
 
 .navbar__logo--desktop {
+  font-size: 2em;
   justify-self: start;
   margin: 0;
   grid-column: 2;
+  padding: 0.25rem 0;
 }
 
 .navbar__list--deskop {
