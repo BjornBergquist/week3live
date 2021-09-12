@@ -9,6 +9,8 @@ import RoutingPath from "./RoutingPath";
 import { UserContext } from "../shared/provider/UserProvider";
 import LocalStorage from "../shared/storage/LocalStorage";
 import { useHistory } from "react-router";
+import { AccessoriesView } from "../views/accessoriesview/AccessoriesView";
+import { NewsView } from "../views/newsview/NewsView";
 
 export const Routes = ({ children }) => {
   const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
@@ -53,6 +55,8 @@ export const Routes = ({ children }) => {
           path={RoutingPath.profileView}
           component={authenticationRequired(ProfileView)}
         />
+        <Route path={RoutingPath.accessoriesView} component={AccessoriesView} />
+        <Route path={RoutingPath.newsView} component={NewsView} />
         <Route path={RoutingPath.homeView} component={HomeView} />
         {/*<Route path={RoutingPath.fourOFourView} component={FourOFourView} />*/}
       </Switch>

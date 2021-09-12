@@ -39,6 +39,16 @@ export const NavigationDesktop = () => {
             Shop
           </button>
         </li>
+        <li>
+          <button onClick={() => history.push(RoutingPath.newsView)}>
+            News
+          </button>
+        </li>
+        <li>
+          <button onClick={() => history.push(RoutingPath.accessoriesView)}>
+            Accessories
+          </button>
+        </li>
       </ul>
       {renderLogin()}
     </nav>
