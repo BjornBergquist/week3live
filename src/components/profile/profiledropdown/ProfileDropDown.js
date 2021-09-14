@@ -22,9 +22,7 @@ export const ProfileDropDown = () => {
       <p>email@email.com</p>
       <hr />
       <Link to={RoutingPath.profileView}>Profile</Link>
-      <br />
       <Link to={RoutingPath.settingsView}>Settings</Link>
-      <br />
       <button onClick={() => logout()}>Log out</button>
     </div>
   );
