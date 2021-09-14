@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export const StoreView = () => {
   const [count, setCount] = useState(0);
+
   useEffect(() => {
     console.log("Hej dotNet20D!");
     return () => {
