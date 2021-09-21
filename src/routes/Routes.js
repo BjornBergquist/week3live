@@ -11,6 +11,7 @@ import LocalStorage from "../shared/storage/LocalStorage";
 import { useHistory } from "react-router";
 import { AccessoriesView } from "../views/accessoriesview/AccessoriesView";
 import { NewsView } from "../views/newsview/NewsView";
+import { PokemonView } from "../views/pokemonview/PokemonView";
 
 export const Routes = ({ children }) => {
   const [authenticatedUser, setAuthenticatedUser] = useContext(UserContext);
@@ -57,6 +58,7 @@ export const Routes = ({ children }) => {
         />
         <Route path={RoutingPath.accessoriesView} component={AccessoriesView} />
         <Route path={RoutingPath.newsView} component={NewsView} />
+        <Route path={RoutingPath.pokemonView} component={PokemonView} />
         <Route path={RoutingPath.homeView} component={HomeView} />
         {/*<Route path={RoutingPath.fourOFourView} component={FourOFourView} />*/}
       </Switch>

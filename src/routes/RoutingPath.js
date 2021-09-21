@@ -5,6 +5,7 @@ const settingsView = "/settings";
 const profileView = "/profile";
 const accessoriesView = "/accessories";
 const newsView = "/news";
+const pokemonView = "/pokemon";
 
 export default {
   homeView,
@@ -14,4 +15,5 @@ export default {
   profileView,
   accessoriesView,
   newsView,
+  pokemonView,
 };

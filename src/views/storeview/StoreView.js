@@ -1,21 +1,36 @@
 import { useState, useEffect } from "react";
 import PokemonAPIService from "../../shared/api/service/PokemonAPIService";
+import { useHistory } from "react-router";
+import RoutingPath from "../../routes/RoutingPath";
 
 export const StoreView = () => {
   const [count, setCount] = useState(0);
   const [serverData, setServerData] = useState();
+  const history = useHistory();
 
   const fetchData = async () => {
     const { data } = await PokemonAPIService.getAllPokemon();
     setServerData(data);
   };
 
+  const location = {
+    pathname: "/home",
+    state: "ett state",
+  };
   const displayData = () => {
     return serverData?.results.map((pokemon, i) => (
       <div key={pokemon.name}>
         <h3>
           {i + 1}. {pokemon.name}
         </h3>
+        <button
+          onClick={() =>
+            //history.push({ pathname: RoutingPath.pokemonView, state: pokemon })
+            history.push(RoutingPath.pokemonView, pokemon)
+          }
+        >
+          More Info
+        </button>
       </div>
     ));
   };
