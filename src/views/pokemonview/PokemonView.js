@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router";
 import axios from "axios";
+import { ItemsInCartContext } from "../../shared/provider/ItemsInCartProvider";
 
 export const PokemonView = () => {
   const location = useLocation();
   console.log(location);
   const [serverData, setServerData] = useState();
+  const [itemsInCart, setItemsInCart] = useContext(ItemsInCartContext);
 
   const fetchData = async () => {
     await fetch(location.state.url)
@@ -46,6 +48,11 @@ export const PokemonView = () => {
         <h1>{location.state.name}</h1>
         <button onClick={() => console.log(serverData)}>Show ServerData</button>
         {displayData()}
+        <button
+          onClick={() => setItemsInCart([...itemsInCart, location.state.name])}
+        >
+          Add to cart
+        </button>
       </section>
     </main>
   );
